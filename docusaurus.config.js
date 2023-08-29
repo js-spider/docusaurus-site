@@ -26,6 +26,12 @@ const config = {
      {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'v3',
+            },
+          },
         },
         blog: {
           showReadingTime: true,

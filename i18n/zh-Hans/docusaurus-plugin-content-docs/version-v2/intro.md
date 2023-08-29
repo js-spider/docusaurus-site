@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 教程简介 v1
+# 教程简介 zh-Hans v2
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
