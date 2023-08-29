@@ -54,6 +54,11 @@ const config = {
         { to: "/api", label: "API", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          dropdownActiveClassDisabled: true,
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
