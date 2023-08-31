@@ -20,6 +20,7 @@ const config = {
     locales: ['en', 'zh-Hans'],
     path: 'i18n',
   },
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       "docusaurus-preset-openapi",
@@ -37,7 +38,10 @@ const config = {
           showReadingTime: true,
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/apiDoc.scss"),
+          ],
         },
       },
     ],
