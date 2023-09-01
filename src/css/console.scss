@@ -84,6 +84,7 @@
   div.tabs-container{
     ul.tabs{
       background-color: var(--background-secondary);
+      border-radius: 8px;
       li{
         background-color: var(--background-tertiary);
         margin: 15px 0px 15px 15px !important;
