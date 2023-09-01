@@ -32,6 +32,16 @@
         display: none;
         // color: var(--content-link-default);
     }
+
+    /* 批量创建 height 值 */
+    @for $var from 1 through 100 {
+        $dis: $var * 10 + px;
+        .api-inline-br-#{$var} {
+            display: block;
+            clear: both;
+            height: $dis;
+        }
+    }
 }
 #__docusaurus_skipToContent_fallback{
     padding-right: 20px;

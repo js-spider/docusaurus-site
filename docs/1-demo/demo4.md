@@ -4,6 +4,23 @@ hide_table_of_contents: true
 
 ---
 
+```bash title=api-br使用
+
+# * = 1-100 用于实现多个换行符 h5 下会收起
+class = api-br-*  
+
+# * = 1-100 用于实现多个换行符 h5 下不会收起
+class = api-inline-br-*  
+
+
+# <div class='api-br'><br/><br/></div>
+# 手动填充 br h5下会收起
+
+class = api-br  
+```
+<div class="api-inline-br-30"></div>
+
+
 **HTTP请求**
 
 - GET /api/v2/mix/market/orderbook
@@ -89,7 +106,8 @@ hide_table_of_contents: true
 
 **如何解决 右侧代码块重叠问题**
 
-<div class="api-br-30"></div>
+<div class="api-br"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+
 
 ```json title=返回示例
 {
