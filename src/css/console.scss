@@ -1,0 +1,171 @@
+@mixin console-code-style{
+  background-color: var(--background-primary);
+  div[class^=codeBlockTitle]{
+    background-color: transparent;
+    border: none;
+  }
+  pre.prism-code{
+    border-radius: 8px;
+  }
+  code[class^=codeBlockLines]{
+    background-color: var(--background-secondary, #282828);
+  }
+}
+@mixin console-code-style-im{
+  background-color: var(--background-primary) !important;
+  div[class^=codeBlockTitle]{
+    background-color: transparent !important;
+    border: none !important;
+  }
+  pre.prism-code{
+    width: 100% !important;
+    border-radius: 8px !important;
+  }
+  code[class^=codeBlockLines]{
+    background-color: var(--background-secondary, #282828) !important;
+  }
+}
+
+@mixin code-in-console {
+  width: 400px;
+  margin: 16px 0px;
+  position:absolute;
+  right: -16px;
+  box-shadow: none;
+  @include console-code-style;
+}
+
+
+@mixin code-in-inline {
+  width: unset !important;
+  position:unset !important;
+  float: none !important;
+  right: unset !important;
+  clear: both !important;
+  div[class^=codeBlockTitle]{
+    background-color: var(--background-secondary, #282828) !important;
+    border-bottom: 1px solid var(--background-tertiary) !important;
+  }
+  pre.prism-code{
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+}
+
+@mixin title-console-show {
+ /* content: 'console';
+  font-weight: 600;
+  color: gray;
+  position: absolute;
+  right: -90px;
+  padding: 5px 15px;*/
+}
+
+@mixin title-console-hidden {
+  content: '';
+  width: unset;
+  float:unset;
+  display: none !important;
+  padding: 0px;
+}
+
+@mixin console-hidden {
+  border-right: none !important;
+  padding-right: 0px !important;
+}
+
+@mixin console-show {
+  position: relative;
+  padding-right: 433px;
+}
+
+
+@mixin tab-container-console{
+  div.tabs-container{
+    ul.tabs{
+      background-color: var(--background-secondary);
+      li{
+        background-color: var(--background-tertiary);
+        margin: 15px 0px 15px 15px !important;
+        border-radius: 4px;
+        padding: 3px 10px;
+        border:none;
+      }
+    }
+  }
+}
+
+.container:has(.theme-code-block){
+  @include console-show;
+  .container:before{
+    @include title-console-show;
+  }
+  .theme-code-block{
+     @include code-in-console;
+  }
+}
+
+.container:has(.row > .col--3){
+  @include console-hidden;
+  &:before{
+    @include title-console-hidden;
+  }
+  .theme-code-block{
+   @include code-in-inline;
+  }
+}
+
+@mixin mixin-api-code-console{
+  @include code-in-console;
+  .theme-code-block{
+    @include code-in-inline;
+    @include console-code-style-im;
+  }
+  @include tab-container-console;
+}
+
+.api-code-console{
+ @include mixin-api-code-console;
+}
+
+/*.api-code-console-clear{
+  @include mixin-api-code-console;
+}*/
+
+.api-console-clear{
+  clear: both;
+}
+
+.api-code-inline{
+  @include code-in-inline;
+  .theme-code-block{
+    @include code-in-inline;
+  }
+}
+
+.api-br{
+  display: block;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .api-br{
+    display: none;
+  }
+  .container{
+    @include console-hidden
+  }
+  main:before{
+    @include title-console-hidden;
+  }
+  .theme-code-block{
+    @include code-in-inline;
+  }
+  .api-code-console{
+    @include code-in-inline;
+    .theme-code-block{
+      @include code-in-inline;
+    }
+  }
+}

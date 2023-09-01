@@ -1,5 +1,57 @@
 @import "theme";
+@import "console";
+
+#__docusaurus{
+    overflow: auto;
+    background-color: var(--background-primary, #1F1F1F);
+    color: var(--content-primary);
+    font-size: 16px;
+    .theme-doc-sidebar-container{
+        box-sizing: border-box;
+        width: 256px;
+        div[class^=sidebarViewport]{
+            width: 100%
+        }
+        div[class^=sidebar]{
+            width: 100%
+        }
+    }
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 18px;
+    }
+}
+#__docusaurus_skipToContent_fallback{
+    padding-right: 20px;
+}
 
 #__docusaurus .navbar{
     background-color: var(--background-always-black, #0D0E0E);
+    padding: 0px 40px;
+    .navbar__item,.navbar__link,.clean-btn{
+        &:hover{
+            color: var(--content-link-default, #03aac7);
+        }
+        color: var(--content-primary, #FFF);
+    }
+    .navbar__link--active{
+        color: var(--content-link-default, #03aac7);
+    }
+}
+#__docusaurus_skipToContent_fallback{
+    background-color: var(--background-primary, #1F1F1F);
+}
+
+@media screen and (max-width: 997px){
+    #__docusaurus .navbar{
+        padding: 0px 20px;
+    }
 }

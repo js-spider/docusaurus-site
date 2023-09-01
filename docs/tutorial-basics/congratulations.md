@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+hide_table_of_contents: true
+className: abcccc
 ---
 
 # Congratulations!

@@ -1,3 +1,17 @@
-#__docusaurus{
-  --background-always-black: #0D0E0E
+html[data-theme="dark"]{
+  --background-always-black: #0D0E0E;
+  --content-primary: #FFF;
+  --background-primary: #1F1F1F;
+  --background-secondary: #282828;
+  --background-tertiary: #565656;
+  --content-link-default: #03aac7;
+}
+
+html[data-theme="light"]{
+  --background-primary: #FFF;
+  --background-always-black: #FFF;
+  --content-primary: #1F1F1F;
+  --background-secondary: #F6F6F6;
+  --background-tertiary: #EBEBEB;
+  --content-link-default: #03aac7;
 }
