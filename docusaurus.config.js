@@ -17,7 +17,7 @@ const config = {
   projectName: "docusaurus", // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    locales: ['en', 'zh-CN'],
     path: 'i18n',
   },
   plugins: ['docusaurus-plugin-sass'],
