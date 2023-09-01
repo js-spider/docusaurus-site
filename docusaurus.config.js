@@ -72,12 +72,16 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "tutorial/intro",
             position: "left",
             label: "Tutorial",
           },
-          { to: "/api", label: "API", position: "left" },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "doc",
+            docId: "articles/intro",
+            position: "left",
+            label: "Articles"
+          },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
