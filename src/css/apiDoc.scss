@@ -45,6 +45,9 @@
     .navbar__link--active{
         color: var(--content-link-default, #03aac7);
     }
+    svg[class^=iconLanguage]{
+        display: none;
+    }
 }
 #__docusaurus_skipToContent_fallback{
     background-color: var(--background-primary, #1F1F1F);
