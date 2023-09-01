@@ -30,7 +30,7 @@ const config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v3',
+              label: 'v2',
             },
           },
         },
@@ -57,12 +57,42 @@ const config = {
       items: [
         {
           type: "doc",
-          docId: "intro",
+          docId: "demo/demo1",
           position: "left",
-          label: "Tutorial",
+          label: "Demo",
         },
-        { to: "/api", label: "API", position: "left" },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          type: "doc",
+          docId: "spot/intro",
+          position: "left",
+          label: "Spot",
+        },
+        {
+          type: "doc",
+          docId: "contract/intro",
+          position: "left",
+          label: "Contract",
+        },
+        {
+          type: "doc",
+          docId: "broker/intro",
+          position: "left",
+          label: "Broker",
+        },
+        {
+          type: "doc",
+          docId: "margin/intro",
+          position: "left",
+          label: "Margin",
+        },
+        {
+          type: "doc",
+          docId: "trading/intro",
+          position: "left",
+          label: "Trading",
+        },
+       /* { to: "/api", label: "API", position: "left" },
+        { to: "/blog", label: "Blog", position: "left" },*/
         {
           type: 'docsVersionDropdown',
           position: 'right',

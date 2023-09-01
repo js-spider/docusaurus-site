@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# 教程简介 zh-Hans v3
+# Tutorial Intro en v1
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
-## 开始
+## Getting Started
 
 Get started by **creating a new site**.
 
 Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-## 生成一个新站点
+## Generate a new site
 
 Generate a new Docusaurus site using the **classic template**:
 
@@ -20,7 +20,7 @@ Generate a new Docusaurus site using the **classic template**:
 npm init docusaurus@latest my-website classic
 ```
 
-## 启动您的网站
+## Start your site
 
 Run the development server:
 

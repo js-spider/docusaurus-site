@@ -1,11 +1,7 @@
 ---
-sidebar_position: 1
 hide_table_of_contents: true
-
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # 深度行情接口
 
@@ -20,9 +16,8 @@ import TabItem from '@theme/TabItem';
 
 - GET /api/v2/mix/market/orderbook
 
-**请求示例**
 
-```bash
+```bash title=请求示例
 /api/v2/mix/market/orderbook?symbol=BTCUSDT&productType=umcbl
 ```
 
@@ -33,8 +28,6 @@ import TabItem from '@theme/TabItem';
 | symbol | String | 是 | 交易币对，BTCUSDT |
 | productType | String | 是 | 产品类型<br/>umcbl USDT专业合约<br/>dmcbl 混合合约<br/>cmcbl USDC专业合约<br/>sumcbl USDT专业合约模拟盘<br/>sdmcbl 混合合约模拟盘<br/>scmcbl USDC专业合约模拟盘 |
 | limit | String | 否 | 深度档位 100，5 15 50 100<br/>默认100 |
-
-
 
 
 ```json title=返回示例

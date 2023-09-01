@@ -1,8 +1,9 @@
 ---
-sidebar_position: 1
+title: 有代码块 右侧显示 console
+hide_table_of_contents: true
 ---
 
-# Tutorial Intro  en v2
+# Tutorial Intro en v3
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

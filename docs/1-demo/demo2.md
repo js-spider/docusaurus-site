@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+title: 有代码块 右侧大纲
 ---
 
-# Tutorial Intro en v1
+# Tutorial Intro en v3
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

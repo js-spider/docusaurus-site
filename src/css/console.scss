@@ -96,6 +96,20 @@
   }
 }
 
+
+/* tab 切换  当在inline模式下  内部代码块保持 inline    */
+.container {
+  div.tabs-container{
+    .margin-top--md{
+      .theme-code-block{
+        @include code-in-inline
+      }
+    }
+  }
+}
+
+
+
 .container:has(.theme-code-block){
   @include console-show;
   .container:before{
@@ -129,10 +143,6 @@
  @include mixin-api-code-console;
 }
 
-/*.api-code-console-clear{
-  @include mixin-api-code-console;
-}*/
-
 .api-console-clear{
   clear: both;
 }
@@ -144,14 +154,21 @@
   }
 }
 
-.api-br{
-  display: block;
+
+/* 批量创建 height 值 */
+@for $var from 1 through 100 {
+  $dis: $var * 10 + px;
+  .api-br-#{$var} {
+    display: block;
+    clear: both;
+    height: $dis;
+  }
 }
 
 
 
 @media screen and (max-width: 1200px) {
-  .api-br{
+  [class^=api-br]{
     display: none;
   }
   .container{
